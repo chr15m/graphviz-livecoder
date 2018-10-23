@@ -2,6 +2,7 @@ A tiny self-executing Makefile for the live-coding of graphviz `dot` files.
 
 ```shell
 curl https://chr15m.github.io/graphviz-livecoder/dotlive > ~/bin/dotlive && chmod 755 ~/bin/dotlive
+dotlive watch mydotfile.svg
 ```
 
 ![Screencast](./screencast.gif)
