@@ -21,6 +21,9 @@ help:
 	@echo "	$(notdir $(MAKEFILE_LIST)) myfile.png myotherfile.svg"
 	@echo
 	@echo "File type is determined from the target extension."
+	@echo "Open the image in an image viewer which does reload-on-change."
+	@echo "e.g. preview on OSX or ristretto on Linux."
+	@echo
 
 %.svg: %.dot
 	dot $< -Tsvg -o$@

@@ -31,6 +31,8 @@ EXAMPLES:
 	dotlive myfile.png myotherfile.svg
 
 File type is determined from the target extension.
+Open the image in an image viewer which does reload-on-change.
+e.g. preview on OSX or ristretto on Linux.
 ```
 
  * [Documentation for the graphviz `dot` format files](http://www.graphviz.org/documentation/).
@@ -41,7 +43,7 @@ File type is determined from the target extension.
 Assuming you have a file called `test.dot` in the current folder:
 
 ```shell
-dotlive test.png
+dotlive watch test.png
 ```
 
 Contents of `test.dot`:
