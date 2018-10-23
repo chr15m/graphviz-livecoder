@@ -16,7 +16,7 @@ help:
 	@echo "	# continuously build myfile.svg from myfile.dot"
 	@echo "	$(notdir $(MAKEFILE_LIST)) watch myfile.svg"
 	@echo
-	@echo "	# continuously build myfile.png from myfile.dot"
+	@echo "	# build (once) myfile.png from myfile.dot"
 	@echo "	# and myotherfile.svg from myotherfile.dot"
 	@echo "	$(notdir $(MAKEFILE_LIST)) myfile.png myotherfile.svg"
 	@echo

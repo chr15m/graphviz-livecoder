@@ -26,7 +26,7 @@ EXAMPLES:
 	# continuously build myfile.svg from myfile.dot
 	dotlive watch myfile.svg
 
-	# continuously build myfile.png from myfile.dot
+	# build (once) myfile.png from myfile.dot
 	# and myotherfile.svg from myotherfile.dot
 	dotlive myfile.png myotherfile.svg
 
