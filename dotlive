@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+
+help:
+	@echo "Graphviz live-coding tool."
+	@echo
+	@echo "USAGE:"
+	@echo "	$(notdir $(MAKEFILE_LIST)) [watch] FILE1.svg [FILE2.png ... ]"
+	@echo
+	@echo "ARGS:"
+	@echo "	watch     - continuously watch and re-build the named files."
+	@echo "	FILE1.svg - build the file FILE1.svg from FILE1.dot source."
+	@echo "	FILE2.png - build the file FILE1.png from FILE2.dot source."
+	@echo
+	@echo "EXAMPLES:"
+	@echo
+	@echo "	# continuously build myfile.svg from myfile.dot"
+	@echo "	$(notdir $(MAKEFILE_LIST)) watch myfile.svg"
+	@echo
+	@echo "	# continuously build myfile.png from myfile.dot"
+	@echo "	# and myotherfile.svg from myotherfile.dot"
+	@echo "	$(notdir $(MAKEFILE_LIST)) myfile.png myotherfile.svg"
+	@echo
+	@echo "File type is determined from the target extension."
+
+%.svg: %.dot
+	dot $< -Tsvg -o$@
+
+%.png: %.dot
+	dot $< -Tpng -o$@
+
+watch:
+	while true; do $(MAKEFILE_LIST) -q $(filter-out $@,$(MAKECMDGOALS)) || $(MAKEFILE_LIST) $(filter-out $@,$(MAKECMDGOALS)); sleep 0.1; done
