@@ -38,6 +38,8 @@ e.g. preview on OSX or ristretto on Linux.
  * [Documentation for the graphviz `dot` format files](http://www.graphviz.org/documentation/).
  * [Graphviz tag on Stackoverflow](https://stackoverflow.com/questions/tagged/graphviz).
 
+`dotlive` depends upon `make` and `graphviz`. These binaries must be in your path. You should also open the images with a viewer which supports reload-on-change.
+
 ### Use
 
 Assuming you have a file called `test.dot` in the current folder:
