@@ -35,6 +35,7 @@ Open the image in an image viewer which does reload-on-change.
 e.g. preview on OSX or ristretto on Linux.
 ```
 
+ * [GraphViz Pocket Reference](https://graphs.grevian.org/)
  * [Documentation for the graphviz `dot` format files](http://www.graphviz.org/documentation/).
  * [Graphviz tag on Stackoverflow](https://stackoverflow.com/questions/tagged/graphviz).
 
